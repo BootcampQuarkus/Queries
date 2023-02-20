@@ -1,6 +1,7 @@
 package com.quarkus.bootcamp.nttdata.infraestructure.resources;
 
 import com.quarkus.bootcamp.nttdata.infraestructure.entity.PaymentD;
+import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
@@ -12,5 +13,5 @@ import java.util.List;
 @Path("/payment")
 public interface IPaymentApi {
   @GET
-  List<PaymentD> getAll(@QueryParam("productId") Long productId);
+  Uni<List<PaymentD>> getAll(@QueryParam("productId") Long productId);
 }

@@ -1,6 +1,7 @@
 package com.quarkus.bootcamp.nttdata.infraestructure.resources;
 
 import com.quarkus.bootcamp.nttdata.infraestructure.entity.AccountD;
+import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
@@ -13,9 +14,9 @@ import java.util.List;
 @Path("/accounts")
 public interface IAccountApi {
   @GET
-  List<AccountD> getAll(@QueryParam("customerId") Long customerId);
+  Uni<List<AccountD>> getAll(@QueryParam("customerId") Long customerId);
 
   @GET
   @Path("/{id}")
-  AccountD getById(@PathParam("id") Long id);
+  Uni<AccountD> getById(@PathParam("id") Long id);
 }
