@@ -5,10 +5,12 @@ import com.quarkus.bootcamp.nttdata.domain.interfaces.IMapper;
 import com.quarkus.bootcamp.nttdata.infraestructure.entity.OperationD;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+
 @ApplicationScoped
 public class OperationMapper implements IMapper<Operation, OperationD> {
   @Inject
   OperationTypeMapper mapper;
+
   @Override
   public OperationD toEntity(Operation operation) {
     OperationD operationD = new OperationD();

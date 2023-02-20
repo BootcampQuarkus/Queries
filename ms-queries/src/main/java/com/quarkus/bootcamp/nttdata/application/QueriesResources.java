@@ -1,6 +1,8 @@
 package com.quarkus.bootcamp.nttdata.application;
 
 import com.quarkus.bootcamp.nttdata.domain.entity.AccountOperation;
+import com.quarkus.bootcamp.nttdata.domain.entity.CreditOperation;
+import com.quarkus.bootcamp.nttdata.domain.entity.LineOfCreditOperation;
 import com.quarkus.bootcamp.nttdata.domain.entity.Products;
 import com.quarkus.bootcamp.nttdata.domain.service.QueriesService;
 import io.quarkus.mongodb.reactive.ReactiveMongoClient;
@@ -12,8 +14,6 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import org.bson.Document;
 import org.jboss.logging.Logger;
-
-import java.util.List;
 
 @Path("/query")
 @Produces(MediaType.APPLICATION_JSON)
@@ -44,6 +44,7 @@ public class QueriesResources {
     getCollection().insertOne(document).onItem().ignore().andContinueWithNull();
     return products;
   }
+
   @GET
   @Path("/account/{id}")
   public AccountOperation getAccount(@PathParam("id") Long accountId) {
@@ -52,29 +53,14 @@ public class QueriesResources {
 
   @GET
   @Path("/credit/{id}")
-  public Products getCredit(@PathParam("id") Long id) {
+  public CreditOperation getCredit(@PathParam("id") Long id) {
     return service.getCredit(id);
   }
 
   @GET
   @Path("/lineofcredit/{id}")
-  public Products getLineOfCredit(@PathParam("id") Long id) {
+  public LineOfCreditOperation getLineOfCredit(@PathParam("id") Long id) {
     return service.getLineOfCredit(id);
   }
 
-  /*
-  @GET
-  @Path("/{id}")
-  public Uni<String> getAll(@PathParam("id") Long id) {
-    return Uni.createFrom().item("hello");
-  }
-  @GET
-  @Path("/{id}")
-  public Response getLineOfCredit(@PathParam("id") Long id) {
-  }
-  @GET
-  @Path("/{id}")
-  public Response getCredit(@PathParam("id") Long id) {
-  }
-  */
 }
