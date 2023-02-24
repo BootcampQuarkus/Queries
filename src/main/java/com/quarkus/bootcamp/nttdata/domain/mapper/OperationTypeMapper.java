@@ -1,8 +1,8 @@
 package com.quarkus.bootcamp.nttdata.domain.mapper;
 
-import com.quarkus.bootcamp.nttdata.domain.entity.OperationType;
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.OperationType;
 import com.quarkus.bootcamp.nttdata.domain.interfaces.IMapper;
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.OperationTypeD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.OperationTypeD;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped

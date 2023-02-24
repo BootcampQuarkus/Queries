@@ -1,6 +1,6 @@
 package com.quarkus.bootcamp.nttdata.infraestructure.resources;
 
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.ShoppingD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.ShoppingD;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

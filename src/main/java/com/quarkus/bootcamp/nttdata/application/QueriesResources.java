@@ -6,14 +6,12 @@ import com.quarkus.bootcamp.nttdata.domain.entity.LineOfCreditOperation;
 import com.quarkus.bootcamp.nttdata.domain.entity.Products;
 import com.quarkus.bootcamp.nttdata.domain.service.QueriesService;
 import io.quarkus.mongodb.reactive.ReactiveMongoClient;
-import io.quarkus.mongodb.reactive.ReactiveMongoCollection;
 import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
-import org.bson.Document;
 import org.jboss.logging.Logger;
 
 @Path("/query")
@@ -28,10 +26,6 @@ public class QueriesResources {
   QueriesService service;
   @Inject
   ReactiveMongoClient client;
-
-  private ReactiveMongoCollection<Document> getCollection() {
-    return client.getDatabase("db-queries").getCollection("audits");
-  }
 
   @GET
   @Path("/{id}")

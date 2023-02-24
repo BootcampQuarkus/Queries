@@ -1,8 +1,8 @@
 package com.quarkus.bootcamp.nttdata.domain.mapper;
 
-import com.quarkus.bootcamp.nttdata.domain.entity.LineOfCredit;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.LineOfCredit;
 import com.quarkus.bootcamp.nttdata.domain.interfaces.IMapper;
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.LineOfCreditD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.products.LineOfCreditD;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
