@@ -1,11 +1,11 @@
-package com.quarkus.bootcamp.nttdata.infraestructure.entity;
+package com.quarkus.bootcamp.nttdata.domain.entity.products;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class LineOfCreditD {
+public class LineOfCredit {
   protected Long id;
   protected Double amount;
   protected Double available;

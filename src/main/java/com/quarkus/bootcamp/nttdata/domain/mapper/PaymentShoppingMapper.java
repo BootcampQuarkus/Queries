@@ -1,8 +1,8 @@
 package com.quarkus.bootcamp.nttdata.domain.mapper;
 
-import com.quarkus.bootcamp.nttdata.domain.entity.Operation2;
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.PaymentD;
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.ShoppingD;
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation2;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.PaymentD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.ShoppingD;
 import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped

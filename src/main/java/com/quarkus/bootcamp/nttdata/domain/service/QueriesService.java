@@ -1,6 +1,11 @@
 package com.quarkus.bootcamp.nttdata.domain.service;
 
 import com.quarkus.bootcamp.nttdata.domain.entity.*;
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation;
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation2;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.Account;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.Credit;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.LineOfCredit;
 import com.quarkus.bootcamp.nttdata.domain.mapper.*;
 import com.quarkus.bootcamp.nttdata.infraestructure.resources.*;
 import io.smallrye.mutiny.Uni;
@@ -40,7 +45,6 @@ public class QueriesService {
     Uni<List<Account>> accountList = accountApi.getAll(customerId).onItem().transform(p -> p.stream().map(q -> aMapper.toDto(q)).toList());
     Uni<List<Credit>> creditList = creditApi.getAll(customerId).onItem().transform(p -> p.stream().map(q -> cMapper.toDto(q)).toList());
     Uni<List<LineOfCredit>> lineOfCreditList = lineOfCreditApi.getAll(customerId).onItem().transform(p -> p.stream().map(q -> locMapper.toDto(q)).toList());
-
 
     return Uni.combine()
           .all()

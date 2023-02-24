@@ -1,5 +1,6 @@
 package com.quarkus.bootcamp.nttdata.domain.entity;
 
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,7 +12,6 @@ public class AccountOperation {
   protected Long id;
   protected Double amount;
   protected Long customerId;
-  ;
   protected Long cardId;
   protected List<Operation> operations;
 }

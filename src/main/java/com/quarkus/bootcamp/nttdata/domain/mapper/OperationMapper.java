@@ -1,8 +1,8 @@
 package com.quarkus.bootcamp.nttdata.domain.mapper;
 
-import com.quarkus.bootcamp.nttdata.domain.entity.Operation;
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation;
 import com.quarkus.bootcamp.nttdata.domain.interfaces.IMapper;
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.OperationD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.OperationD;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 

@@ -1,6 +1,6 @@
 package com.quarkus.bootcamp.nttdata.infraestructure.resources;
 
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.PaymentD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.operations.PaymentD;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

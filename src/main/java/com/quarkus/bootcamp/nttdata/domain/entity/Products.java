@@ -1,5 +1,8 @@
 package com.quarkus.bootcamp.nttdata.domain.entity;
 
+import com.quarkus.bootcamp.nttdata.domain.entity.products.Account;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.Credit;
+import com.quarkus.bootcamp.nttdata.domain.entity.products.LineOfCredit;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

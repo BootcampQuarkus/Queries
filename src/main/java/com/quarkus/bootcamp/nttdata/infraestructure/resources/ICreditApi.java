@@ -1,6 +1,6 @@
 package com.quarkus.bootcamp.nttdata.infraestructure.resources;
 
-import com.quarkus.bootcamp.nttdata.infraestructure.entity.CreditD;
+import com.quarkus.bootcamp.nttdata.infraestructure.entity.products.CreditD;
 import io.smallrye.mutiny.Uni;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

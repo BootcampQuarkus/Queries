@@ -1,5 +1,6 @@
 package com.quarkus.bootcamp.nttdata.domain.entity;
 
+import com.quarkus.bootcamp.nttdata.domain.entity.operations.Operation2;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

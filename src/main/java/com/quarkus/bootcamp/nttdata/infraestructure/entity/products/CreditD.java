@@ -1,11 +1,11 @@
-package com.quarkus.bootcamp.nttdata.domain.entity;
+package com.quarkus.bootcamp.nttdata.infraestructure.entity.products;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Credit {
+public class CreditD {
   protected Long id;
   protected Double amount;
   protected Double balance;
